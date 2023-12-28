@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Dunagiri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <h1>Dunagiri</h1>
+        </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>
+            Dunagiri Retreat</h1>
+          <p>
+            <b>Reconnect with your body, mind, and soul. </b><br>
+            <i> "You ask me why I dwell in the green mountain;
+              I smile and make no reply for my heart is free to care.
+              As the peach blossom flows down the stream and into the unknown,
+              I have a world apart that is among no one."</i>
+          </p>
+          <button>MORE INFO</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="SEARCH">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5><i>Reconnect with your body, mind, and soul...</i></h5>
+          <h2>Welcome to <b> <i>Dunagiri Retreat</b></i></h2>
+          <p>
+            <b><i> Dunagiri Retreat </b></i> offers freedom from the madness and pressures of modern life. We offer a
+            space where reflection and refreshment of the soul take place as people leave their busy routines behind.
+            Meant for nature lovers and spiritual seekers who value peace, and appreciate the natural grandeur of their
+            surroundings, your stay with us will leave you refreshed, renewed, and uplifted.
+
+
+
+            Inspired by the idea that it’s love and not money that makes the world go around,<b> <i>Piyush Kumar founded
+                Dunagiri Retreat in 2005</b></i> after leaving a lucrative career at the World Bank. He wanted to create
+            a different kind of resort—one that benefits the ecology and the local population as much as it does the
+            visitor. As a result, Dunagiri Retreat is entirely served by the villagers of this area; everyone working
+            here is a farmer and a resident of the three villages that surround us.
+          </p>
+          <button class="btn1">READ MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h1><b>The Retreat</b></h1>
+        <p><b><i>Dunagiri Retreat</b></i> offers a "rustic-deluxe" experience—modern facilities within very remote and rural
+          surroundings in the Himalayan wilderness. While maintaining a close relationship with nature, your comfort is
+          our utmost concern. Our hospitality is genuine and refined—yet down to earth. Pure deshi. Right down to the
+          fresh cow’s milk, naturally sweet from its diet of mountain herbs. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span><b>Organic Farm-Fresh Meals</b></span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span><b>Fireside Dining</b></span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span><b>Walks & Hikes</b></span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span><b>Spring Drinking Water</b></span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span><b>Modern Bath Facilities</b></span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span><b>Hot Showers</b></span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/rjt-piyush.webp" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Founder
+           <i> <b>Piyush Kumar</b></i></h2>
+          <p>Guided by the philosophy that love transcends monetary value, Piyush Kumar, a former World Bank
+            professional, <i><b>established Dunagiri Retreat in 2005</b></i>. His vision was to create a retreat that harmonizes with
+            nature and nurtures the local community, fostering a unique synergy between guests and villagers under the
+            retreat's guiding Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nostrum dignissimos
+            sint ex, reprehenderit deleniti in quos assumenda, aperiam cupiditate ea soluta recusandae, perferendis
+            quaerat nesciunt quis. Cupiditate mollitia deleniti qui eius explicabo, quod animi, modi quo sed, ex
+            debitis!principles
+          </p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading"><b>Address</b></h2>
+            <div class="accordionItemContent">
+              <p>Dunagiri Retreat, Village Chari, Near Mahavatar Babaji's Cave, Block, Dwarahat, Uttarakhand 263653
+                India</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading"><b>Contact</b></h2>
+            <div class="accordionItemContent">
+              <p>+91 98102 67719</p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading"><b>G-Mail</b></h2>
+            <div class="accordionItemContent">
+              <p>delighted@dunagiri.com </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img
+          src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> Designed and developed by <br> Rajat Thakur <br> All rights reserved @2023
+        </p>
+
+        <p><b>Developer contact</b> <br>rajathakur2905@gmail.com <br>6230998108</p>
+      
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.
+          </li>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About us</li>
+          <li>Customer Care&Help</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li><i class="far fa-envelope"></i>xyz@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
